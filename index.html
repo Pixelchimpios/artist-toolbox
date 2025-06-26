@@ -1,69 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Artist Toolbox</title>
-    <style>
-        body {
-            background-color: orange;
-            text-align: center;
-            font-family: sans-serif;
-        }
-        img.logo {
-            width: 200px;
-            margin: 20px auto;
-        }
-        a {
-            font-weight: bold;
-            display: block;
-            margin: 10px;
-        }
-        .grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .grid-item {
-            text-align: center;
-        }
-        .grid-item img {
-            height: 300px;
-            width: auto;
-            border: 2px solid black;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Artist Toolbox</title>
+  <style>
+    body {
+      background-color: orange;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Fixed logo in top-left */
+    .corner-logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+    }
+
+    img.logo {
+      width: 80px;
+      height: auto;
+    }
+
+    header {
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .white-box {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #111;
+      text-align: left;
+    }
+
+    .white-box h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1 1 42%;
+      min-width: 300px;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .footer-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .footer-links a {
+      font-weight: bold;
+      color: blue;
+      text-decoration: underline;
+      margin: 0 12px;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .grid-item {
+      text-align: center;
+    }
+
+    .grid-item img {
+      height: 160px;
+      width: auto;
+      border: 2px solid black;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-    <h1>Artist Toolbox</h1>
-    <p><strong>By:</strong></p>
-    <img src="MainView/PixelchimpIOS LOGO.jpg" class="logo" alt="Logo">
 
+  <!-- Fixed Logo Top-Left -->
+  <div class="corner-logo">
+    <img src="MainView/PixelchimpIOS LOGO.jpg" class="logo" alt="Logo" />
+  </div>
+
+  <!-- Centered Title -->
+  <header>
+    <h1>Artist Toolbox</h1>
+  </header>
+
+  <!-- White Feature Box -->
+  <div class="white-box">
+    <p><strong>Artist Toolbox</strong> – The Complete Creative Companion for Painters and Creative Professionals</p>
+    <p>Whether you're planning your next painting, analyzing color harmony, or preparing a printable layout, Artist Toolbox brings five powerful, professional-grade tools together in one beautifully unified app for iPad and Mac.</p>
+    <p>Built for painters, illustrators, art students, designers, educators, and anyone working with color or canvas, Artist Toolbox helps you save time, improve accuracy, and create with confidence.</p>
+
+    <h3>🧰 What's Inside:</h3>
+
+    <div class="columns">
+      <div class="column">
+        <h4>🖼️ <strong>Canvas Studio</strong></h4>
+        <ul>
+          <li>Set custom canvas dimensions in inches</li>
+          <li>Adjustable grids + rule of thirds overlays</li>
+          <li>Convert any image into line/shade sketch</li>
+          <li>Zoom, scale, measure, and calibrate</li>
+          <li>Print to scale across multiple pages</li>
+          <li>Save and reuse layout projects</li>
+        </ul>
+
+        <h4>🎨 <strong>Color Mixing Lab</strong></h4>
+        <ul>
+          <li>Mix Gamblin paints by pigment percent</li>
+          <li>LAB comparison for visual matching</li>
+          <li>Unlimited mixes, ~80% accurate</li>
+        </ul>
+
+        <h4>🧠 <strong>Color Theory Studio</strong></h4>
+        <ul>
+          <li>Classic wheel: primary → tertiary</li>
+          <li>Mix up to 4 colors + gray/black/white</li>
+          <li>Tonal scale and mixing tips</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h4>🎯 <strong>Color Picker Studio</strong></h4>
+        <ul>
+          <li>Pick up to 10 colors from any image</li>
+          <li>Gamblin paint mix suggestions</li>
+          <li>View tint, tone, RGB, HEX, CMYK, HSV</li>
+          <li>Explore complementary palettes</li>
+          <li>Print a full summary sheet</li>
+        </ul>
+
+        <h4>🌈 <strong>Image Filter Studio</strong></h4>
+        <ul>
+          <li>Apply Red, Green, Blue, Yellow filters</li>
+          <li>Use Black & White or Grayscale</li>
+          <li>Perfect for tonal/value studies</li>
+        </ul>
+
+        <h4>💾 <strong>Other Features</strong></h4>
+        <ul>
+          <li>Save Canvas and Color Picker projects</li>
+          <li>Print layout grids and color chip sheets</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- One-Line Footer Links -->
+  <div class="footer-links">
     <a href="MainView/ArtistToolbox_PrivacyPolicy.pdf">Privacy Policy</a>
     <a href="MainView/ArtistToolbox_SupportContact.pdf">Support Contact</a>
     <a href="MainView/Apple Standard LICENSED APPLICATION END USER LICENSE AGREEMENT.pdf">Apple Standard EULA</a>
+  </div>
 
-    <div class="grid">
-        <div class="grid-item">
-            <a href="CanvasStudio/index.html">
-                <img src="CanvasStudio/1 canvas Studio main screen.png" alt="Canvas Studio">
-                <br>Canvas Studio
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="ColorPickerStudio/index.html">
-                <img src="ColorPickerStudio/1 Color Picker Studio Main Screen.png" alt="Color Picker Studio">
-                <br>Color Picker Studio
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="OtherStudio/index.html">
-                <img src="OtherStudio/1 other .png" alt="Other Studio">
-                <br>Other Studio
-            </a>
-        </div>
+  <!-- Section Previews -->
+  <div class="grid">
+    <div class="grid-item">
+      <a href="CanvasStudio/index.html">
+        <img src="CanvasStudio/1 canvas Studio main screen.png" alt="Canvas Studio">
+        <br>Canvas Studio
+      </a>
     </div>
+    <div class="grid-item">
+      <a href="ColorPickerStudio/index.html">
+        <img src="ColorPickerStudio/1 Color Picker Studio Main Screen.png" alt="Color Picker Studio">
+        <br>Color Picker Studio
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="OtherStudio/index.html">
+        <img src="OtherStudio/1 other .png" alt="Other Studio">
+        <br>Other Studio
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
