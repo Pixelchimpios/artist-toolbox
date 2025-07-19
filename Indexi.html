@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ARTTREZZI – The Artist Toolbox</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8a502;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: flex-start; /* align content to top */
+      justify-content: center;
+      padding-top: 30px; /* move up */
+    }
+
+    .container {
+      transform: scale(1.5); /* 👈 scale entire content larger */
+      transform-origin: top center;
+      max-width: 500px;
+      padding: 40px 20px;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      margin-left: 145px;
+    }
+
+    .logo {
+      width: 60px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #ffff66;
+      font-size: 1.2em;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 235px;
+      margin: 0 auto 30px auto;
+      left: 50px;
+    }
+
+    .toolbox-img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      margin-left: 17px;
+    }
+
+    .title-overlay {
+      position: absolute;
+      bottom: 0;
+      right: -18px;
+      font-size: 4.2em;
+      font-weight: 900;
+      color: white;
+      text-shadow: 6px 6px #a14000;
+      line-height: 0.85;
+      text-align: right;
+      z-index: 2;
+    }
+
+    .button-row {
+      margin-top: -10px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .button-row a {
+      background-color: #e97131;
+      border: 2px solid #a14000;
+      color: white;
+   
+      text-decoration: none;
+      padding: 4px 20px;
+      border-radius: 8px;
+      font-size: 0.95em;
+    }
+
+    .contact {
+      display: block;
+      margin-top: 4px;
+      font-style: italic;
+      color: black;
+      font-weight: bold;
+      text-decoration: underline;
+      text-align: center;
+      width: 90px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Logo + Tagline -->
+    <div class="header-row">
+      <img src="PixelchimpIOS LOGO.jpg" alt="Logo" class="logo">
+      <div class="tagline">“The Artist Toolbox”</div>
+    </div>
+
+    <!-- Toolbox Image + ARTTREZZI overlay -->
+    <div class="image-wrapper">
+      <img src="APP ICON.png" alt="Toolbox Icon" class="toolbox-img">
+      <div class="title-overlay">ARTTREZZI</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-row">
+      <a href="#">App Store</a>
+     <a href="Legal.html">Legal Info</a>
+      <a href="AppImages.html">App Images</a> <!-- ← Linked properly -->
+    </div>
+
+    <!-- Contact aligned under App Store -->
+   <!-- Contact aligned under App Store -->
+	<a href="CONTACT.html" class="contact">Contact</a>
+
+
+  </div>
+</body>
+</html>
