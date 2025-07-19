@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ARTTREZZI – The Artist Toolbox</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8a502;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 30px;
+    }
+
+    .container {
+      transform: scale(1.5);
+      transform-origin: top center;
+      max-width: 500px;
+      padding: 40px 20px;
+    }
+
+    .header-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-bottom: 4px;
+      margin-left: 140px;
+    }
+
+    .logo {
+      width: 60px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #333333;
+      font-size: 1.2em;
+      margin-top: 4px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 235px;
+      margin: 0 auto 30px auto;
+      left: 50px;
+    }
+
+    .toolbox-img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      margin-left: 17px;
+    }
+
+    .title-overlay {
+      position: absolute;
+      bottom: 0;
+      right: -18px;
+      font-size: 4.2em;
+      font-weight: 900;
+      color: white;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+      line-height: 0.85;
+      text-align: right;
+      z-index: 2;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      flex-wrap: nowrap;
+    }
+
+    .button-link {
+      background-color: #e97131;
+      border: 2px solid #a14000;
+      color: white;
+      width: 100px;
+      height: 18px;
+      border-radius: 8px;
+      font-size: 0.65em; /* slightly smaller */
+      font-weight: 500;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+.button-link:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  transform: translateY(-1.5px) scale(1.03);
+}
+
+
+    footer {
+      text-align: center;
+      font-size: 0.75em;
+      color: #ffffffcc;
+      margin-top: 30px;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 1px;
+      background-color: #ffffff55;
+      margin: 10px auto 14px auto;
+    }
+
+    .contact {
+      display: block;
+      margin-top: 4px;
+      font-style: italic;
+      color: black;
+      font-weight: bold;
+      text-decoration: underline;
+      text-align: center;
+      width: 90px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ✅ Logo + Tagline wrapped and centered -->
+    <div class="header-wrapper">
+      <div class="header-row">
+        <img src="PixelchimpIOS LOGO.jpg" alt="Logo" class="logo">
+        <div class="tagline">“The Artist Toolbox”</div>
+      </div>
+    </div>
+
+    <!-- Toolbox Image + ARTTREZZI overlay -->
+    <div class="image-wrapper">
+      <img src="APP ICON.png" alt="Toolbox Icon" class="toolbox-img">
+      <div class="title-overlay">ARTTREZZI</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-row">
+   <span class="button-link" onclick="window.open('itms-apps://apps.apple.com/', '_blank')">App Store</span>
+
+      <span class="button-link" onclick="window.location.href='Legal.html'">Legal Info</span>
+      <span class="button-link" onclick="window.location.href='AppImages.html'">App Images</span>
+      <span class="button-link" onclick="window.location.href='CONTACT.html'">Contact</span>
+    </div>
+
+    <!-- Copyright -->
+    <footer>
+      © 2025 Arttrezzi – All Rights Reserved.
+    </footer>
+
+  </div>
+</body>
+</html>
