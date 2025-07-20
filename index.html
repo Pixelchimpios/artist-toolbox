@@ -10,18 +10,42 @@
       background-color: #f8a502;
       font-family: 'Segoe UI', sans-serif;
       color: white;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .top-banner {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 2px solid #ffeeba;
+      border-radius: 10px;
+      padding: 6px 16px;
+      margin-top: 12px;
+      display: flex;
       justify-content: center;
-      padding-top: 30px;
+      align-items: center;
+      gap: 12px;
+      max-width: 400px;
+    }
+
+    .top-banner img {
+      height: 32px;
+    }
+
+    .top-banner p {
+      font-size: 0.95em;
+      font-weight: bold;
+      margin: 0;
     }
 
     .container {
-      transform: scale(1.5);
+      transform: scale(1.45);
       transform-origin: top center;
       max-width: 500px;
-      padding: 40px 20px;
+      padding: 10px 20px 40px 20px;
+      margin-top: 20px;
     }
 
     .header-wrapper {
@@ -35,7 +59,6 @@
       align-items: center;
       justify-content: flex-start;
       gap: 10px;
-      margin-bottom: 4px;
       margin-left: 140px;
     }
 
@@ -53,7 +76,7 @@
     .image-wrapper {
       position: relative;
       width: 235px;
-      margin: 0 auto 30px auto;
+      margin: 10px auto 20px auto;
       left: 50px;
     }
 
@@ -81,8 +104,8 @@
       display: flex;
       justify-content: center;
       gap: 12px;
-      margin-top: -10px;
-      margin-bottom: 15px;
+      margin-top: -5px;
+      margin-bottom: 12px;
       flex-wrap: nowrap;
     }
 
@@ -93,7 +116,7 @@
       width: 100px;
       height: 18px;
       border-radius: 8px;
-      font-size: 0.65em; /* slightly smaller */
+      font-size: 0.65em;
       font-weight: 500;
       cursor: pointer;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -103,17 +126,16 @@
       justify-content: center;
     }
 
-.button-link:hover {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
-  transform: translateY(-1.5px) scale(1.03);
-}
-
+    .button-link:hover {
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+      transform: translateY(-1.5px) scale(1.03);
+    }
 
     footer {
       text-align: center;
       font-size: 0.75em;
       color: #ffffffcc;
-      margin-top: 30px;
+      margin-top: 18px;
     }
 
     footer::before {
@@ -139,9 +161,16 @@
   </style>
 </head>
 <body>
+
+  <!-- 🔝 Top Banner (narrow, centered) -->
+  <div class="top-banner">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store badge">
+    <p>Coming Soon to the App Store</p>
+  </div>
+
   <div class="container">
 
-    <!-- ✅ Logo + Tagline wrapped and centered -->
+    <!-- ✅ Logo + Tagline -->
     <div class="header-wrapper">
       <div class="header-row">
         <img src="PixelchimpIOS LOGO.jpg" alt="Logo" class="logo">
@@ -149,7 +178,7 @@
       </div>
     </div>
 
-    <!-- Toolbox Image + ARTTREZZI overlay -->
+    <!-- Toolbox Image + Overlay -->
     <div class="image-wrapper">
       <img src="APP ICON.png" alt="Toolbox Icon" class="toolbox-img">
       <div class="title-overlay">ARTTREZZI</div>
@@ -157,8 +186,7 @@
 
     <!-- Buttons -->
     <div class="button-row">
-   <span class="button-link" onclick="window.open('itms-apps://apps.apple.com/', '_blank')">App Store</span>
-
+      <span class="button-link" onclick="window.open('itms-apps://apps.apple.com/', '_blank')">App Store</span>
       <span class="button-link" onclick="window.location.href='Legal.html'">Legal Info</span>
       <span class="button-link" onclick="window.location.href='AppImages.html'">App Images</span>
       <span class="button-link" onclick="window.location.href='CONTACT.html'">Contact</span>
