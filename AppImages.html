@@ -28,11 +28,29 @@
       border-radius: 8px;
       cursor: pointer;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
+      z-index: 999;
     }
 
     .back-button:hover {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       transform: translateY(-1px) scale(1.02);
+    }
+
+    .app-store-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 998;
+    }
+
+    .app-store-btn img {
+      width: 120px;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .app-store-btn img:hover {
+      transform: scale(1.05);
     }
 
     h1 {
@@ -58,6 +76,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
     }
 
     .gallery-item span img {
@@ -99,6 +118,33 @@
       transform: translateY(-1.5px) scale(1.03);
     }
 
+    .hover-popup {
+      display: none;
+      position: absolute;
+      bottom: 385px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.88);
+      color: #fff;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 1.5;
+      z-index: 10;
+      text-align: center;
+      pointer-events: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .hover-popup {
+      display: block;
+      opacity: 1;
+    }
+
     footer {
       padding: 30px 0 20px 0;
       font-size: 0.75em;
@@ -131,32 +177,49 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .app-store-btn {
+        position: static;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Back button -->
-  <span class="back-button" onclick="window.location.href='index.html'">← Back</span>
+ <!-- Back Button -->
+  <a href="index.html" class="back-button">← Back</a>
 
-  <!-- Title -->
+
+   <!-- App Store Badge -->
+  <a href="#" class="app-store-btn" onclick="alert('Coming soon to the App Store!')">
+    <img src="download-on-the-app-store.svg" alt="Download on the App Store">
+  </a>
+
+
+  <!-- Page Title -->
   <h1>App Images</h1>
 
-  <!-- Gallery -->
+  <!-- Image Gallery -->
   <div class="gallery">
     <div class="gallery-item">
+      <div class="hover-popup"><strong>Canvas Studio</strong><br>Canvas planning, sizing, scaling, layout tools, zoom, and print-ready views.</div>
       <span onclick="window.location.href='CanvasStudio/Canvas_index.html'">
         <img src="1 canvas Studio main.png" alt="Canvas Studio">
       </span>
       <span class="button-link" onclick="window.location.href='CanvasStudio/Canvas_index.html'">Canvas Studio</span>
     </div>
+
     <div class="gallery-item">
+      <div class="hover-popup"><strong>Color Picker Studio</strong><br>Pick, analyze, and match colors from images. Shows tint, tone, shade, and suggested paint mix.</div>
       <span onclick="window.location.href='ColorPickerStudio/Color_index.html'">
         <img src="1 Color Picker Main.png" alt="Color Picker Studio">
       </span>
       <span class="button-link" onclick="window.location.href='ColorPickerStudio/Color_index.html'">Color Picker Studio</span>
     </div>
+
     <div class="gallery-item">
+      <div class="hover-popup"><strong>Other Studio</strong><br>Includes paint palette builder, color mixing lab, color wheel, and filter tools.</div>
       <span onclick="window.location.href='OtherStudio/other_index.html'">
         <img src="OtherStudio/1 other .png" alt="Other Studio">
       </span>
