@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support & Contact – Artist Toolbox</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8a502;
+      font-family: 'Segoe UI', sans-serif;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background-color: #e97131;
+      border: 2px solid #a14000;
+      color: white;
+      font-size: 0.75em;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .back-button:hover {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .app-store-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 998;
+    }
+
+    .app-store-btn img {
+      width: 120px;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .app-store-btn img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-top: 90px;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      max-width: 700px;
+      padding: 0 20px;
+      text-align: justify;
+      line-height: 1.9em;
+      font-size: 1.3em;
+    }
+
+    .email {
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .emoji {
+      font-size: 1.4em;
+      margin-right: 8px;
+    }
+
+    a {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 20px 0 10px 0;
+      font-size: 0.75em;
+      color: #ffffffcc;
+      text-align: center;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 1px;
+      background-color: #ffffff55;
+      margin: 10px auto;
+    }
+
+    footer a {
+      color: #ffffffcc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">← Back</a>
+
+  <!-- App Store Badge -->
+  <a href="#" class="app-store-btn" onclick="alert('Coming soon to the App Store!')">
+    <img src="download-on-the-app-store.svg" alt="Download on the App Store">
+  </a>
+
+  <!-- Page Title -->
+  <h1>Support & Contact</h1>
+
+  <!-- Content -->
+  <div class="container">
+    <p>
+      If you have any questions, technical issues, or need assistance with the <strong>Artist Toolbox</strong> app, feel free to reach out:
+    </p>
+
+    <p>
+      <span class="emoji">📧</span><span class="email">Email:</span>
+      <a href="mailto:PixelchimpIOS@gmail.com">PixelchimpIOS@gmail.com</a>
+    </p>
+
+    <p>
+      We strive to respond to all inquiries within <strong>48 hours</strong>. Thank you for using <em>Artist Toolbox</em> — your creative companion.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Arttrezzi – All Rights Reserved. |
+    <a href="Legal.html">Legal</a> |
+    <a href="Contact.html">Contact</a>
+  </footer>
+
+</body>
+</html>

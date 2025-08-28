@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Legal Info – Artist Toolbox</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8a502;
+      font-family: 'Segoe UI', sans-serif;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 60px;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background-color: #e97131;
+      border: 2px solid #a14000;
+      color: white;
+      font-size: 0.75em;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .back-button:hover {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .app-store-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 998;
+    }
+
+    .app-store-btn img {
+      width: 120px;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .app-store-btn img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.8em;
+      font-weight: 900;
+      color: white;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+      margin-bottom: 40px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .button-link {
+      background-color: #e97131;
+      border: 2px solid #a14000;
+      color: white;
+      width: 220px;
+      height: 30px;
+      border-radius: 8px;
+      font-size: 0.85em;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .button-link:hover {
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .description {
+      font-size: 0.8em;
+      color: #333;
+      text-align: center;
+      margin-top: 6px;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 20px 0 10px 0;
+      font-size: 0.75em;
+      color: #ffffffcc;
+      text-align: center;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 1px;
+      background-color: #ffffff55;
+      margin: 10px auto;
+    }
+
+    footer span {
+      color: #ffffffcc;
+      text-decoration: none;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    footer span:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Back Button -->
+  <a href="index.html" class="back-button">← Back</a>
+
+
+  <!-- App Store Badge -->
+  <a href="#" class="app-store-btn" onclick="alert('Coming soon to the App Store!')">
+    <img src="download-on-the-app-store.svg" alt="Download on the App Store">
+  </a>
+
+  <!-- Title -->
+  <h1>Legal Info</h1>
+
+  <!-- Legal Links -->
+  <div class="button-container">
+    <span class="button-link" onclick="window.open('ArtistToolbox_PrivacyPolicy.pdf', '_blank')">Privacy Policy</span>
+    <div class="description">How we collect, use, and protect your data.</div>
+
+    <span class="button-link" onclick="window.open('Apple_EULA.pdf', '_blank')">Apple Standard EULA</span>
+    <div class="description">Apple's End User License Agreement for apps.</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Arttrezzi – All Rights Reserved. |
+    <span onclick="window.location.href='AppImages.html'">App Images</span> |
+    <span onclick="window.location.href='Contact.html'">Contact</span>
+  </footer>
+
+</body>
+</html>
