@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ColorPicker Studio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8a502;
+      font-family: 'Segoe UI', sans-serif;
+      color: black;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background-color: #e97131;
+      border: 2px solid #a14000;
+      color: white;
+      font-size: 0.75em;
+      padding: 4px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+
+    .back-button:hover {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .app-store-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 120px;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+      margin-top: 50px;
+      margin-bottom: 6px;
+    }
+
+    .sub-instruction {
+      color: white;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 10px;
+    }
+
+    .image-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 240px;
+      position: relative;
+    }
+
+    .image-block img {
+      width: 220px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .image-block img:hover {
+      transform: scale(1.05);
+    }
+
+    .image-caption {
+      font-weight: bold;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .popup-text {
+      visibility: hidden;
+      width: 240px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      font-size: 1em;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-block:hover .popup-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    footer {
+      padding: 0px 0 0px;
+      font-size: 0.75em;
+      color: #ffffffcc;
+      text-align: center;
+      background-color: #f8a502;
+      margin-top: 20px;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 1px;
+      background-color: #ffffff55;
+      margin: 6px auto 14px;
+    }
+
+    footer span {
+      color: #ffffffcc;
+      text-decoration: none;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    footer span:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .app-store-badge {
+        position: static;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <span class="back-button" onclick="window.location.href='../AppImages.html'">← Back to App Images</span>
+
+<a href="https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513"
+   target="_blank"
+   rel="noopener noreferrer">
+  <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+       alt="Download on the App Store"
+       class="app-store-badge">
+</a>
+
+
+<h1>ColorPicker Studio</h1>
+<div class="sub-instruction">Click any image to view full size</div>
+
+
+  <!-- Row 1: Main menu and color selection -->
+  <div class="image-gallery">
+    <div class="image-block">
+      <img src="1 Color Picker Studio Main Screen.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Main navigation screen of ColorPicker Studio.</div>
+      <div class="image-caption">Main Menu</div>
+    </div>
+
+    <div class="image-block">
+      <img src="2 Color Picker Studio.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">This is how the app appears when launched.</div>
+      <div class="image-caption">Startup View</div>
+    </div>
+
+    <div class="image-block">
+      <img src="3B Color Picker studio with image no color selected.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">User loaded image with no color selected yet.</div>
+      <div class="image-caption">Image Loaded (No Color)</div>
+    </div>
+
+    <div class="image-block">
+      <img src="3 Color Picker Studio with image.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Color selected from image is shown here.</div>
+      <div class="image-caption">Color Selected</div>
+    </div>
+
+    <div class="image-block">
+      <img src="4 summary.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Displays the selected color and its tint, tone, and shade variations.</div>
+      <div class="image-caption">Color Summary</div>
+    </div>
+  </div>
+
+  <!-- Row 2: Paint Chips and Instructions -->
+  <div class="image-gallery">
+    <div class="image-block">
+      <img src="5 Color Picker Paint Chip.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Paint chip on white background with suggested color mix from your palette.”</div>
+      <div class="image-caption">Paint Chip (White)</div>
+    </div>
+
+    <div class="image-block">
+      <img src="6 Color Picker Paint Chip Black.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Paint chip on Black background with suggested color mix from your palette.”</div>
+      <div class="image-caption">Paint Chip (Black)</div>
+    </div>
+
+    <div class="image-block">
+      <img src="7 Color Picker Paint Chip Grey.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Paint chip on Grey background with suggested color mix from your palette.</div>
+      <div class="image-caption">Paint Chip (Grey)</div>
+    </div>
+
+    <div class="image-block">
+      <img src="8 Color Picker Paint Chip compliment colors and tones.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Complementary color relationships and tones.</div>
+      <div class="image-caption">Complementary Colors</div>
+    </div>
+
+    <div class="image-block">
+      <img src="9 ColorPicker  Instructions 1.png" onclick="window.open(this.src, '_blank')">
+      <div class="popup-text">Instructions on how to use ColorPicker Studio.</div>
+      <div class="image-caption">Instructions</div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Arttrezzi – All Rights Reserved. |
+    <span onclick="window.location.href='../AppImages.html'">App Images</span> |
+    <span onclick="window.location.href='Legal.html'">Legal</span> |
+    <span onclick="window.location.href='Contact.html'">Contact</span>
+  </footer>
+
+</body>
+</html>
