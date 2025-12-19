@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,42 @@
   <meta name="description" content="ARTTREZZI is The Artist Toolbox — a professional app for artists to plan compositions, measure layouts, color-match artwork, and prepare images for printing. Available on the Apple App Store." />
 
   <title>ARTTREZZI – The Artist Toolbox</title>
+
+  <!-- ✅ BRAND + APP SCHEMA (BIGGEST WIN) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://arttrezzi.com/#organization",
+        "name": "ARTTREZZI",
+        "url": "https://arttrezzi.com/",
+        "logo": "https://arttrezzi.com/PixelchimpIOS%20LOGO.jpg",
+        "sameAs": [
+          "https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://arttrezzi.com/#software",
+        "name": "ARTTREZZI – The Artist Toolbox",
+        "operatingSystem": "iOS, macOS",
+        "applicationCategory": "DesignApplication",
+        "url": "https://arttrezzi.com/",
+        "image": "https://arttrezzi.com/APP%20ICON.png",
+        "author": {
+          "@id": "https://arttrezzi.com/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     body {
@@ -179,7 +219,7 @@
 
   <div class="container">
 
-    <!-- ✅ Brand H1 (VERY important) -->
+    <!-- ✅ Brand H1 -->
     <h1>ARTTREZZI — The Artist Toolbox</h1>
 
     <!-- Logo + Tagline -->
@@ -207,7 +247,7 @@
       <a class="button-link" href="CONTACT.html">Contact</a>
     </div>
 
-    <!-- ✅ About brand text (entity recognition) -->
+    <!-- ✅ About brand text -->
     <div class="about">
       <strong>About ARTTREZZI</strong><br>
       ARTTREZZI is a professional artist toolbox designed for painters, illustrators,
