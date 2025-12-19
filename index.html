@@ -1,19 +1,16 @@
 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="google-site-verification" content="r-7ag1GwZm791fTD0At5C7gVqXo3Wdr0vo9a">
-  <title>ARTTREZZI – The Artist Toolbox</title>
-</head>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
   <meta charset="UTF-8" />
+
+  <!-- ✅ Google Search Console verification -->
+  <meta name="google-site-verification" content="r-7ag1GwZm791fTD0At5C7gVqXo3Wdr0vo9a" />
+
   <title>ARTTREZZI – The Artist Toolbox</title>
+
   <style>
     body {
       margin: 0;
@@ -33,7 +30,6 @@
       border: 2px solid #ffeeba;
       border-radius: 10px;
       padding: 6px 16px;
-      margin-top: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -43,12 +39,6 @@
 
     .top-banner img {
       height: 32px;
-    }
-
-    .top-banner p {
-      font-size: 0.95em;
-      font-weight: bold;
-      margin: 0;
     }
 
     .container {
@@ -68,7 +58,6 @@
     .header-row {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 10px;
       margin-left: 140px;
     }
@@ -157,38 +146,25 @@
       background-color: #ffffff55;
       margin: 10px auto 14px auto;
     }
-
-    .contact {
-      display: block;
-      margin-top: 4px;
-      font-style: italic;
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-      text-align: center;
-      width: 90px;
-      margin-left: 15px;
-    }
   </style>
 </head>
+
 <body>
 
-<!-- 🔝 Top Banner (upper-right, same style) -->
-<a href="https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513"
-   target="_blank"
-   rel="noopener noreferrer"
-   style="position: absolute; top: 18px; right: 18px;">
-  <div class="top-banner">
-    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-         alt="App Store badge">
-  </div>
-</a>
-
-
+  <!-- 🔝 App Store badge (top-right) -->
+  <a href="https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="position: absolute; top: 18px; right: 18px;">
+    <div class="top-banner">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+           alt="Download on the App Store">
+    </div>
+  </a>
 
   <div class="container">
 
-    <!-- ✅ Logo + Tagline -->
+    <!-- Logo + Tagline -->
     <div class="header-wrapper">
       <div class="header-row">
         <img src="PixelchimpIOS LOGO.jpg" alt="Logo" class="logo">
@@ -196,7 +172,7 @@
       </div>
     </div>
 
-    <!-- Toolbox Image + Overlay -->
+    <!-- App Icon -->
     <div class="image-wrapper">
       <img src="APP ICON.png" alt="Toolbox Icon" class="toolbox-img">
       <div class="title-overlay">ARTTREZZI</div>
@@ -204,17 +180,16 @@
 
     <!-- Buttons -->
     <div class="button-row">
-<a href="https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513"
-      <span class="button-link" onclick="window.open("https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513", '_blank')">App Store</span>
+      <a class="button-link"
+         href="https://apps.apple.com/app/arttrezzi-artist-toolbox/id6748783513"
+         target="_blank">App Store</a>
 
-</a>
-      <span class="button-link" onclick="window.location.href='Legal.html'">Legal Info</span>
-      <span class="button-link" onclick="window.location.href='AppImages.html'">App Images</span>
-      <span class="button-link" onclick="window.location.href='CONTACT.html'">Contact</span>
+      <a class="button-link" href="Legal.html">Legal Info</a>
+      <a class="button-link" href="AppImages.html">App Images</a>
+      <a class="button-link" href="CONTACT.html">Contact</a>
     </div>
 
-
-    <!-- Copyright -->
+    <!-- Footer -->
     <footer>
       © 2025 Arttrezzi – All Rights Reserved.
     </footer>
